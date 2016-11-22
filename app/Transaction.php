@@ -8,8 +8,8 @@ class Transaction extends Model
 {
 
     protected $fillable = [
-        'name',
-        'cnp'
+        'customer_id',
+        'amount'
     ];
 
     /**
