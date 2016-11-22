@@ -35,10 +35,10 @@ class CustomerController extends Controller
     }
 
 
-    // works
+    // add new customer
+    // POST http://localhost:7000/api/customer?token=&cnp=8904328903&name=Tadziu
     public function store(Request $request)
     {
-
         try {
             if (! $user = JWTAuth::parseToken()->authenticate()) {
                 return response()->json(['user_not_found'], 404);

@@ -14,6 +14,7 @@ class TokenAuthController extends Controller
 {
 
     // create new user in db - works
+    // POST http://localhost:7000/api/register?name=Greg&email=greg@gmail.com&password=abc123
     public function register(Request $request){
 
         $user = new User();
@@ -30,6 +31,7 @@ class TokenAuthController extends Controller
     }
 
     // authenticate and return token if user and password is valid - works
+    // POST http://localhost:7000/api/authenticate?email=greg@gmail.com&password=abc123
     public function authenticate(Request $request)
     {
         $credentials = $request->only('email', 'password');
